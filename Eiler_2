@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int answer;
+
+
+
+int main()
+{
+	int n = 0;
+	int count = 0;
+	while (answer < 4000000) {
+		if (answer % 2 == 0) {
+			count = answer + count;
+		}
+		cout<<fib(n)<<endl;
+		n++;
+	}
+	
+	
+	cout << count << endl;
+
+}
+
+int fib(int n) 
+{
+	int c = 0;
+	if (n < 0) return 0;
+	if (n == 1) return 1;
+	answer = fib(n - 1) + fib(n - 2);
+	return answer;
+}
