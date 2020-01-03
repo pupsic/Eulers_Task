@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int coun = 0;
+	for (int i = 0; i < 1000; i++) {
+		if (i % 3 == 0 || i % 5 == 00) {
+			coun = coun + i;
+
+		}
+
+	}
+	cout << coun;
+
+}
