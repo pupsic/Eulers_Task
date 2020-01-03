@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+
+int main() {
+	int r = 2520;
+	int c;
+	int ar[15]{ 3,4,6,7,8,9,11,12,13,14,15,16,17,18,19 };
+	bool ex = false;
+	while (ex == false) {
+		for (int j = 0; j < 15; j++) {
+			c=ar[j];
+			if (r % c == 0) {
+
+				
+				ex = true;
+				continue;
+			}
+			else {
+				ex = false;
+				break;
+			}
+			
+
+		}
+		r += 10;
+	}
+	cout << r-10 << endl;
+	
+}
+		
