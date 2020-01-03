@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int first_point = 100000;
+
+int max_palindrom(int max_pal) {
+	if (max_pal> first_point){
+		first_point = max_pal; 
+	}	
+	return 1;
+}
+
+int palindrom(int num) {
+	int x, uc, k = 0;	
+	x = num;
+	while (x != 0)
+	{
+		uc = x % 10;
+		x = x / 10;
+		k = k * 10 + uc;
+	}
+	if (k == num) {
+		max_palindrom(num);
+	}
+	return 1;
+}
+
+
+int main()
+{
+	int num;
+	for (int i = 100; i < 999; i++) {
+		for (int j = 100; j <= i; j++) {
+			num = i * j;
+			palindrom(num);
+		}
+	}
+	cout << first_point << endl;
+} 
