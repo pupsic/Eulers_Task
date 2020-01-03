@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+
+
+int simple(int n) {
+	for (int i = 2; i <= n / 2; i++) 
+		if ((n % i) == 0) return 0;
+	return 1;
+	
+}
+
+int main()
+{
+	int c = 0;
+	int i = 2;
+	while (c < 10001) {
+
+		
+		if (simple(i)) {
+			c++;	
+			}
+		i++;
+
+
+	}
+	cout << i-1 << endl;
+
+}
