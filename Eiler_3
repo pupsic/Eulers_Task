@@ -1,0 +1,26 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+int main()
+{
+	unsigned int tests=1;
+
+	while (tests--)
+	{
+		unsigned long long x= 600851475143;
+
+
+		
+		for (unsigned long long i = 2; i  <= x; i++) {
+
+
+			while (x % i == 0 && x != i) {
+				x =x/ i;
+			}
+		}
+		cout << x << endl;
+	}
+	return 0;
+}
